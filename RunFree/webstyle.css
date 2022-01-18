@@ -1,0 +1,465 @@
+/* Add specialized fonts to the website */
+@font-face {
+    font-family: "Breathe Fire";
+    src: url(Breathe_Fire.otf);
+}
+@font-face {
+    font-family: "Biome";
+    src: url(Biome.ttf);
+}
+
+/* Set Background */
+body:not(#page-404) {
+    background-image: url("seamless_background.jpg");
+    margin: 0;
+}
+
+/* 404-specific */
+html {
+    height: 100%;
+}
+body#page-404 {
+    background-color: rgb(173, 236, 245);
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#page-404 header {
+    white-space: nowrap;
+    flex: none;
+    border: none;
+    position: relative;
+    top: 0;
+    height: 180px;
+    overflow: hidden;
+}
+#page-404 footer {
+    white-space: nowrap;
+    flex: none;
+    background-color: rgb(3, 85, 121);
+    padding: 0;
+    overflow: hidden;
+}
+#page-404 main {
+    overflow-y: hidden;
+    flex: auto;
+}
+#page-404 img {
+    max-width: none;
+    margin: none;
+}
+#page-404 .logo {
+    margin-left: 15px;
+    object-fit: contain;
+    opacity: 1;
+    width: auto;
+    max-height: 85%;
+    vertical-align: middle;
+}
+#page-404 .text-box {
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    padding: 12px 20px;
+}
+#page-404 .text-box p {
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-family: "Biome", Tahoma, sans-serif;
+    text-decoration: bold;
+    text-shadow: 3px 3px rgb(13, 57, 77);
+    display: block;
+}
+#page-404 p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    vertical-align: bottom;
+    max-width: none;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    line-height: 1.8;
+    display: inline-block;
+    color: rgb(227, 243, 250);
+}
+#page-404 .contact {
+    padding: 15px;
+    margin: 0;
+}
+img#paper {
+    border: thin solid purpl;
+    position: relative;
+    object-fit: contain;
+    left: 40%; /* middle of picture to 40% width */
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    margin: 0;
+    padding: 10px;
+}
+
+/* Title */
+header {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: rgb(3, 85, 121);
+    border-bottom: thin solid rgb(150, 204, 228);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh; /* Will always be 10% of screen's height */
+    overflow: hidden; /* Content should not be able to fit beyond this box */
+}
+
+.logo {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    padding: 5px 10px;
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+    height: 100%;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.logo:active {
+    opacity: 0.2;
+}
+
+/* Menu */
+.menu {
+    background-color: rgb(7, 43, 58);
+    position: sticky; /* Will not scroll past top of screen (0) */
+
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden; /* Content should not be able to fit beyond this box */
+    z-index: 1; /* Push static menu to the front */
+}
+
+.menu-right {
+    float: right;
+    border-left: thin solid rgb(95, 128, 143);
+}
+
+.menu a {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    float: left;
+    margin: 0;
+    padding: 12px 8px;
+    width: calc(100%/7);
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: rgb(227, 243, 250);
+    border-right: thin solid rgb(95, 128, 143);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: rgb(150, 204, 228);
+    color: rgb(9, 16, 19);
+}
+
+.menu a:active {
+    background-color: rgb(184, 226, 245);
+}
+
+.menu a.active { /* The current page */
+    background-color: rgb(90, 16, 21);
+    color: rgb(227, 243, 250);
+}
+
+/* Resources (links) */
+.resources {
+    border: none solid purple;
+    padding: 7px 100px;
+    margin: 0;
+}
+
+.resources ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resources.underline {
+    border-bottom: 4px solid rgba(125, 148, 158, 0.7);
+}
+
+/* Footer */
+footer {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    margin: 0;
+    padding: 28px 36px;
+    background-color: rgba(0, 27, 39, 0.7);
+}
+footer .resources {
+    padding-bottom: 2vh;
+}
+footer p {
+    text-shadow: 1px 1px rgb(1, 20, 29);
+    margin-left: 58px;
+    color: rgb(227, 243, 250);
+}
+footer a {
+    color: rgb(255, 195, 116);
+}
+footer a.underline {
+    background-color: rgba(10, 40, 54, 0.6);
+    padding: 10px;
+    border: thin solid rgb(255, 195, 116);
+}
+footer a:hover {
+    color: rgb(120, 241, 245);
+}
+footer a.underline:hover {
+    border: thin solid rgb(120, 241, 245);
+    background-color: rgba(13, 99, 139, 0.6);
+}
+footer address {
+    padding: 15px 50px;
+    color: rgb(227, 243, 250);
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.8;
+}
+footer .fa {
+    font-size: 92px;
+    padding: 30px;
+    padding-left: 0;
+    margin-left: 3vw;
+    margin-left: 60px;
+}
+footer .fa:active {
+    opacity: 0.2;
+}
+
+/* Headings */
+h1 {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    font-family: "Breathe Fire", sans-serif;
+    font-size: 7vh; /* 7% of viewport height */
+    letter-spacing: 2px;
+    color: rgb(227, 243, 250);
+    text-shadow: 4px 2px rgb(40, 64, 75);
+    margin: 0;
+    margin-left: 10px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+h2 {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(24, 57, 71);
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(1, 20, 29);
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 48px;
+    font-family: "Lucida Handwriting", sans-serif;
+    color: rgb(227, 243, 250);
+    text-shadow: 2px 2px black;
+}
+
+/* General Spacing */
+.invisible {
+    visibility: hidden;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.float-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top-space { /* same as img padding */
+    padding-top: 20px;
+}
+.bottom-space {
+    padding-bottom: 20px;
+}
+
+.bottom {
+    direction: ltr; /* standard */
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 28px; /* same as article bottom */
+}
+.middle {
+    max-height: 100%;
+    border: thin solid red;
+    direction: ltr; /* standard */
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Move back up 50% of this box's height */
+}
+
+/* Inline-blocks positioned right-to-left */
+.reverse {
+    direction: rtl;
+}
+
+/* Use this property to view the boundaries of a box: */
+/* border: medium solid red; */
+
+/* General Objects */
+article {
+    box-sizing: border-box; /* Include padding and border for total width/height */
+    position: relative; /* Has a definite position now - to be referenced by child elements */
+    margin: 0;
+    padding: 28px 60px;
+    background-color: rgba(227, 243, 250, 0.70);
+    overflow: hidden;
+    border-bottom: 4px solid rgba(118, 166, 187, 0.7);
+}
+article.no-top {
+    padding-top: 0;
+}
+article.no-bottom {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.picture-box {
+    width: 100%;
+    text-align: left;
+    background-color: rgb(3, 85, 121);
+    overflow: hidden;
+}
+
+img {
+    vertical-align: bottom;
+    display: inline-block;
+    padding: 20px 36px;
+    margin: 0;
+    max-width: 50%;
+}
+
+img.small {
+    max-width: 45%;
+}
+img.small-2 {
+    max-width: 35%;
+    margin-top: 0;
+}
+
+img.rounded {
+    border-radius: 25%;
+}
+img.rounded-2 {
+    border-radius: 60%;
+}
+img.rounded-3 {
+    border-radius: 10%;
+}
+
+img.no-bottom {
+    margin-bottom: 0;
+}
+img.no-top {
+    margin-top: 0;
+}
+
+img.wide {
+    position: relative;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+img.center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p {
+    border: none solid red;
+    margin-left: 38px;
+    max-width: 90%;
+    color: rgb(1, 20, 29);
+    line-height: 2.2;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p + p {
+    margin-top: 36px;
+}
+
+/* Restore article margin of absolutely positioned <p> */
+p.left-margin {
+    margin-left: 60px;
+}
+p.right-margin {
+    margin-right: 60px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li + li :not(.resources) {
+    margin-top: 50px;
+}
+
+li a {
+    line-height: 2.2;
+}
+
+a {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: rgb(128, 5, 165);
+    color: rgb(3, 81, 145);
+}
+
+a:active {
+    opacity: 0.5; 
+}
